@@ -42,7 +42,7 @@ export default function ProductScreen(props) {
              <li>
                 <div className="row">
                     <div>status</div>  
-                      <div>{product.countInStock>0?<span className="success">In Stock</span>:(<span className="error">Unavailable</span>)}</div>
+                      <div>{product.countInStock>0?<span className="success">In Stock</span>:(<span className="danger">Unavailable</span>)}</div>
                        </div>  
                      </li>
                      <li>
@@ -51,6 +51,7 @@ export default function ProductScreen(props) {
                  </ul>
              </div>  
            </div> 
+           
          </div>
        </div>
     )
