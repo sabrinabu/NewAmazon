@@ -1,9 +1,13 @@
 import express from 'express';
 import  Mongoose  from 'mongoose';
+import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 
+dotenv.config();
 const app=express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 Mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/newamazon',{
   useNewUrlParser: true,
   useUnifiedTopology: true,

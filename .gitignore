@@ -9,3 +9,4 @@ manifest.json
 robots.txt
 favicon.ico
 package-lock.json
+.env
